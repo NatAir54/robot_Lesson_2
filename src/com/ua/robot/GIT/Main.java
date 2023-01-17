@@ -2,6 +2,11 @@ package com.ua.robot.GIT;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("I am studying Java!");
+        int x = 21;
+        int y = 15;
+        System.out.println(x + y);
+        System.out.println(x - y);
+        System.out.println(x / y);
+        System.out.println(x * y);
     }
 }
