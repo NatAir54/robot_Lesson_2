@@ -1,4 +1,4 @@
-package com.ua.robot.GIT;
+package com.ua.robot;
 
 public class Main {
     public static void main(String[] args) {
