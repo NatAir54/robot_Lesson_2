@@ -4,21 +4,42 @@ public class MainApp {
     public static void main(String[] args) {
         int a = 859;
         int b = 336;
-        System.out.println(maxNumber(a, b));
-        System.out.println(minNumber(a, b));
-        System.out.println(isEven(a));
-        System.out.println(isEven(b));
+        maxNumber(a, b);
+        minNumber(a, b);
+        isEven(a);
+        isEven(b);
     }
 
-    public static int maxNumber(int par1, int par2) {
-        return Math.max(par1, par2);
+    public static void maxNumber(int par1, int par2) {
+        if(par1 == par2) {
+            System.out.println("These numbers are equal");
+        }
+        if(par1 > par2) {
+            System.out.println(par1);
+        }
+        else {
+            System.out.println(par2);
+        }
     }
 
-    public static int minNumber(int par1, int par2) {
-        return Math.min(par1, par2);
+    public static void minNumber(int par1, int par2) {
+        if(par1 == par2) {
+            System.out.println("These numbers are equal");
+        }
+        if(par1 < par2) {
+            System.out.println(par1);
+        }
+        else {
+            System.out.println(par2);
+        }
     }
 
-    public static boolean isEven(int x) {
-        return x % 2 == 0;
+    public static void isEven(int x) {
+        if(x % 2 == 0) {
+            System.out.println("The number is even.");
+        }
+        else {
+            System.out.println("The number is odd.");
+        }
     }
 }
