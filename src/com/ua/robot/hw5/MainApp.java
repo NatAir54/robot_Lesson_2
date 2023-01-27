@@ -11,34 +11,31 @@ public class MainApp {
     }
 
     public static void maxNumber(int par1, int par2) {
-        if(par1 == par2) {
+        if (par1 == par2) {
             System.out.println("These numbers are equal");
         }
-        if(par1 > par2) {
+        if (par1 > par2) {
             System.out.println(par1);
-        }
-        else {
+        } else {
             System.out.println(par2);
         }
     }
 
     public static void minNumber(int par1, int par2) {
-        if(par1 == par2) {
+        if (par1 == par2) {
             System.out.println("These numbers are equal");
         }
-        if(par1 < par2) {
+        if (par1 < par2) {
             System.out.println(par1);
-        }
-        else {
+        } else {
             System.out.println(par2);
         }
     }
 
     public static void isEven(int x) {
-        if(x % 2 == 0) {
+        if (x % 2 == 0) {
             System.out.println("The number is even.");
-        }
-        else {
+        } else {
             System.out.println("The number is odd.");
         }
     }
