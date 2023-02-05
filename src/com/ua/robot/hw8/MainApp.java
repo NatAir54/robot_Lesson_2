@@ -2,7 +2,7 @@ package com.ua.robot.hw8;
 
 import java.util.Random;
 
-public class Arrays {
+public class MainApp {
     public static void main(String[] args) {
         // Task 1: create 10 elements array and fill it with random numbers
         int[] array = new int[10];
