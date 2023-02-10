@@ -4,7 +4,7 @@ public class Student {
     private final String firstName;
     private final String lastName;
     private final String fullName;
-    private final int age;
+    private int age;
     private int rollNumber;
     private String course;
 
@@ -31,6 +31,10 @@ public class Student {
 
     public int getAge() {
         return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public int getRollNumber() {

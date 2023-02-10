@@ -4,7 +4,7 @@ public class Teacher {
     private final String firstName;
     private final String lastName;
     private final String fullName;
-    private final int age;
+    private int age;
     private String subject;
 
     public Teacher(String firstName, String lastName, int age, String subject) {
@@ -29,6 +29,10 @@ public class Teacher {
 
     public int getAge() {
         return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getSubject() {
