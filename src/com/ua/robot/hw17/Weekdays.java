@@ -10,7 +10,7 @@ public enum Weekdays {
         this.weekdayNumber = weekdayNumber;
     }
 
-    static void getWeekdayByNumber(int number) {
+    public static void getWeekdayByNumber(int number) {
         switch (number) {
             case 1 -> System.out.println(MONDAY);
             case 2 -> System.out.println(TUESDAY);
