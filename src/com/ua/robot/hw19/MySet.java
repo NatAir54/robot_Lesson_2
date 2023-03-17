@@ -3,15 +3,17 @@ package com.ua.robot.hw19;
 import java.util.*;
 
 public class MySet {
-    static Random random = new Random();
     public static void main(String[] args) {
-        Integer[] array = new Integer[1000];
-        for (int i = 0; i < 1000; i++) {
-            array[i] = random.nextInt(1, 51);
+        Set<Integer> hashSet = new HashSet<>();
+        Set<Integer> linkedHashSet = new LinkedHashSet<>();
+        NavigableSet<Integer> treeSet = new TreeSet<>();
+
+        RandomGenerator randomGenerator = new RandomGenerator();
+        for (Integer randomValue : randomGenerator) {
+            hashSet.add(randomValue);
+            linkedHashSet.add(randomValue);
+            treeSet.add(randomValue);
         }
-        Set<Integer> hashSet = new HashSet<>(Arrays.asList(array));
-        Set<Integer> linkedHashSet = new LinkedHashSet<>(Arrays.asList(array));
-        NavigableSet<Integer> treeSet = new TreeSet<>(Arrays.asList(array));
         System.out.println("HashSet: ");
         System.out.println(hashSet);
         System.out.println("LinkedHashSet: ");
@@ -19,4 +21,34 @@ public class MySet {
         System.out.println("TreeSet: ");
         System.out.println(treeSet);
     }
+}
+
+class RandomGenerator implements Iterable<Integer> {
+    final Random random = new Random();
+
+    int generate() {
+        return random.nextInt(1, 51);
+    }
+
+    @Override
+    public Iterator<Integer> iterator() {
+        return new MyIterator();
+    }
+
+    private class MyIterator implements Iterator<Integer> {
+        private final int maxIteration = 1000;
+        private int count = 0;
+
+        @Override
+        public boolean hasNext() {
+            return count < maxIteration;
+        }
+
+        @Override
+        public Integer next() {
+            count++;
+            return generate();
+        }
+    }
+
 }
