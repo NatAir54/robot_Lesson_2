@@ -36,7 +36,7 @@ class RandomGenerator implements Iterable<Integer> {
     }
 
     private class MyIterator implements Iterator<Integer> {
-        private final int maxIteration = 1000;
+        private int maxIteration = 1000;
         private int count = 0;
 
         @Override
