@@ -24,10 +24,10 @@ public class MySet {
 }
 
 class RandomGenerator implements Iterable<Integer> {
-    final Random random = new Random();
+    private static final Random RANDOM = new Random();
 
     int generate() {
-        return random.nextInt(1, 51);
+        return RANDOM.nextInt(1, 51);
     }
 
     @Override
