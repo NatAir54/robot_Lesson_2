@@ -1,6 +1,7 @@
 package com.ua.robot.hw23;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Task1 {
     public static void main(String[] args) {
@@ -8,12 +9,21 @@ public class Task1 {
                 "Sixth", "Seventh", "Eight", "Ninth", "Tenth",
                 "First", "Second", "Third", "Fourth", "Fifth",
                 "Sixth", "Seventh", "Eight", "Ninth", "Tenth");
-        Map<String, Integer> map = new LinkedHashMap<>();
 
+        // first way
+        Map<String, Integer> map = new LinkedHashMap<>();
         list.stream()
                 .distinct()
                 .forEach(s -> map.put(s, count(list, s)));
         System.out.println(map);
+
+        System.out.println();
+
+        // second way
+        Map<String, Integer> map2 = list.stream()
+                .distinct()
+                .collect(Collectors.toMap(s -> s, s -> count(list, s)));
+        System.out.println(map2);
     }
 
     public static int count(List<String> list, String item) {
