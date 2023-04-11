@@ -9,7 +9,7 @@ public class MainApp {
         try{
             System.out.println("Please enter a positive number:");
             double x = input.nextDouble();
-            System.out.println(numberPow(x));
+            System.out.println(numberSquared(x));
         }
         catch(NegativeException ex){
             System.out.println("Exception handling");
@@ -22,7 +22,7 @@ public class MainApp {
         System.out.println("Program is finished.");
     }
 
-    private static double numberPow(double number) throws NegativeException {
+    private static double numberSquared(double number) throws NegativeException {
         if (number < 0){
             throw new NegativeException("The number cannot be negative ", number);
         }
