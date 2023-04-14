@@ -1,6 +1,8 @@
 package com.ua.robot.hw27;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.util.stream.Stream;
 
 public class Main {
     private static final String FILE_NAME = "file.txt";
@@ -30,10 +32,11 @@ public class Main {
     }
 
     private static String readFile(String path) throws IOException {
-        String result = "";
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(path))) {
-            result = bufferedReader.readLine();
+        File file = new File(path);
+        StringBuilder result = new StringBuilder();
+        try (Stream<String> linesStream = Files.lines(file.toPath())) {
+            linesStream.forEach(result::append);
         }
-        return result;
+        return result.toString();
     }
 }
