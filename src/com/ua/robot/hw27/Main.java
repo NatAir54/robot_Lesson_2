@@ -6,6 +6,11 @@ import java.util.stream.Stream;
 
 public class Main {
     private static final String FILE_NAME = "file.txt";
+    private static final String TEXT = "Using BufferedWriter Class. " +
+            "It is used to write text to a character-output stream. " +
+            "It has a default buffer size, but a large buffer size can be assigned. " +
+            "It is useful for writing characters, strings, and arrays. " +
+            "It is better to wrap this class with any writer class for writing data to a file if no prompt output is required.";
 
     public static void main(String[] args) {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
@@ -16,8 +21,13 @@ public class Main {
             String textFromFile = readFile(FILE_NAME);
             System.out.println("Text from the file: " + textFromFile);
 
+            // writing text into file
+            writeFile(writer, TEXT);
+            textFromFile = readFile(FILE_NAME);
+            System.out.println("Text from the file: " + textFromFile);
+
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
