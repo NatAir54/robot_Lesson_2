@@ -1,1 +1,1 @@
-Hi! How are you doing? Using BufferedWriter Class. It is used to write text to a character-output stream. It has a default buffer size, but a large buffer size can be assigned. It is useful for writing characters, strings, and arrays. It is better to wrap this class with any writer class for writing data to a file if no prompt output is required.
+hello
