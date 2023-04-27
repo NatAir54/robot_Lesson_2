@@ -5,9 +5,9 @@ public class SimpleThread implements Runnable {
     public void run() {
         for (int i = 1; i < 11; i++) {
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
-                throw new RuntimeException(e);
+                e.printStackTrace();
             }
             System.out.println("SimpleThread" + " " + i);
         }
